@@ -311,7 +311,7 @@ h2 {
     text-align: right;
   }
   .all_projects .container_project:nth-child(2n) .tags_links_project {
-    justify-content: flex-end;
+    flex-direction: row-reverse;
   }
   body {
     font-size: 1.1rem;
