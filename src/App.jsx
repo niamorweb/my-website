@@ -12,27 +12,27 @@ function App() {
   const myLanguages = [
     {
       language: "HTML",
-      img: "../../../assets/images/languages/html5.svg",
+      img: "../../../my-website/assets/images/languages/html5.svg",
     },
     {
       language: "CSS",
-      img: "../../../assets/images/languages/css.png",
+      img: "../../../my-website/assets/images/languages/css.png",
     },
     {
       language: "SASS",
-      img: "../../../assets/images/languages/sass.svg",
+      img: "../../../my-website/assets/images/languages/sass.svg",
     },
     {
       language: "JAVASCRIPT",
-      img: "../../../assets/images/languages/js.svg",
+      img: "../../../my-website/assets/images/languages/js.svg",
     },
     {
       language: "REACT JS",
-      img: "../../../assets/images/languages/react.svg",
+      img: "../../../my-website/assets/images/languages/react.svg",
     },
     {
       language: "TAILWIND CSS",
-      img: "../../../assets/images/languages/tailwind-css.svg",
+      img: "../../../my-website/assets/images/languages/tailwind-css.svg",
     },
   ];
 
@@ -201,7 +201,7 @@ function App() {
           <a href="">
             <img
               className="hover:scale-[1.3] duration-300"
-              src="../../assets/icons/icon-mail-white.png"
+              src="../../my-website/assets/icons/icon-mail-white.png"
               alt=""
             />
           </a>
@@ -215,7 +215,7 @@ function App() {
         loop
         id="myVideo"
       >
-        <source src="../assets/videos/bg2.mp4" type="video/mp4" />
+        <source src="../my-website/assets/videos/bg2.mp4" type="video/mp4" />
       </video>
       <span
         style={{ opacity: "0" }}
@@ -314,7 +314,7 @@ function App() {
                             target="_blank"
                           >
                             <img
-                              src="../assets/icons/icon-new-tab.svg"
+                              src="../my-website/assets/icons/icon-new-tab.svg"
                               alt=""
                             />
                           </a>
@@ -323,7 +323,7 @@ function App() {
                             href={project.codeSource}
                             target="_blank"
                           >
-                            <img src="../assets/icons/icon-github.svg" alt="" />
+                            <img src="../my-website/assets/icons/icon-github.svg" alt="" />
                           </a>
                         </div>
                         <div className="tags flex gap-[.5rem] justify-self-end">
@@ -345,7 +345,7 @@ function App() {
         <span className="flex ">
           <img
             className="mr-4 hidden md:block"
-            src="../../assets/icons/icon-mail-white.png"
+            src="../../my-website/assets/icons/icon-mail-white.png"
             alt=""
           />
           <span className=" hidden md:block"> Contact me by mail: </span>
