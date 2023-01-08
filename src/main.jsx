@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <CustomCursor />
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="my-website/" element={<App />} />
       </Routes>
     </BrowserRouter>
     </CustomCursorManager>
