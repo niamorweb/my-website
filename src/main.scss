@@ -1,0 +1,151 @@
+@import "./components/CustomCursor/customCursor";
+
+@font-face {
+  font-family: "Paragraph";
+  src: url(../public/assets/fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: "Special Font";
+  src: url(../public/assets/fonts/AnonymousPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Subtitle";
+  src: url(../public/assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Main Title";
+  src: url(../public/assets/fonts/Poppins-Black.ttf);
+}
+
+@font-face {
+  font-family: "Secondary Title";
+  src: url(../public/assets/fonts/Poppins-Bold.ttf);
+}
+
+body {
+  font-family: "Paragraph";
+  font-size: 1rem;
+  color: #d0d3d4;
+  transition: 0.2s;
+}
+
+.subtitle {
+  font-family: "Subtitle";
+  font-size: 1.1rem;
+  color: #1abc9c;
+  transition: 0.2s;
+}
+
+h1 {
+  font-family: "Main Title";
+  font-size: 2.5rem;
+  color: #fffffe;
+  transition: 0.2s;
+}
+
+h2 {
+  font-family: "Secondary Title";
+  font-size: 2rem;
+  color: #fffffe;
+  transition: 0.2s;
+}
+
+.special{
+  font-family: "Special Font";
+
+}
+
+.about_me,
+.my_projects,
+.my_languages {
+  position: relative;
+}
+// .about_me::before {
+//   content: "";
+//   width: 100px;
+//   height: 10px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background-color: #2b2c34;
+// }
+
+.area_checkpoints {
+  position: relative;
+
+  .line_checkpoints {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 0;
+    transition: 2s;
+    // height: calc(100% + 12rem);
+    width: 4px;
+    background-color: white;
+  }
+}
+
+.circle1,
+.circle2,
+.circle3 {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-45%, 0);
+  background-color: #191919;
+  border: 2px solid #ffffff;
+}
+
+@media (min-width: 720px) {
+  body {
+    font-size: 1.1rem;
+  }
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .all_projects .container_project:nth-child(2n) {
+    flex-direction: row-reverse;
+
+    .description {
+      text-align: right;
+    }
+
+    .tags_links_project {
+      justify-content: flex-end;
+    }
+  }
+  body {
+    font-size: 1.1rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1260px) {
+  h1 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+}
+
+.text-tb-rl {
+  writing-mode: vertical-rl;
+}
