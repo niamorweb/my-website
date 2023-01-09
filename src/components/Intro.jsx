@@ -62,8 +62,8 @@ window.onload = function() {
       <h1>FRONT-END DEVELOPER</h1>
 
 
-      <h2 className="text-mainColor text-lg ">
-  <a href="" className="typewrite" data-period="2000" data-type='[ "Welcome to my personal website", "I am Niamor.", "A Web Developer.", "I Love Coding." ]'>
+      <h2 className="text-mainColor text-lg md:text-4xl ">
+      <a href="" className="typewrite" data-period="2000" data-type='[ "Welcome to my personal website", "I am Niamor.", "A Web Developer.", "I Love Coding." ]'>
     <span className="wrap"></span>
   </a>
 </h2>

@@ -162,7 +162,7 @@ export default function Content() {
               {" "}
               <h2>About Me.</h2>
               <p>
-                Hi, I am a 20-year-old web developer from France specializing on
+                Hi, I am a 20 year old web developer from France specializing on
                 front-end development. With over a year of experience in web
                 development, it allowed me to gain a solid knowledge in
                 development.
