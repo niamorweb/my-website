@@ -103,7 +103,7 @@ h2 {
   border: 2px solid #ffffff;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 785px) {
   body {
     font-size: 1.1rem;
   }
@@ -111,6 +111,10 @@ h2 {
     font-size: 1.3rem;
   }
 
+
+  h1 {
+    font-size: 3.2rem;
+  }
   h2 {
     font-size: 2.5rem;
   }

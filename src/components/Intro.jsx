@@ -1,72 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 export default function Intro() {
-  var TxtType = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-
-    if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-    var that = this;
-    var delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) { delta /= 2; }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-    }
-
-    setTimeout(function() {
-    that.tick();
-    }, delta);
-};
-
-window.onload = function() {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
-};
   return (
     <section className="intro min-h-[100vh] text-center justify-center gap-14  md:pl-8  mb-32  flex flex-col w-[85%] m-auto items-center ">
       <h1>FRONT-END DEVELOPER</h1>
 
-
       <h2 className="text-mainColor text-lg md:text-4xl ">
-      <a href="" className="typewrite" data-period="2000" data-type='[ "Welcome to my personal website", "I am Niamor.", "A Web Developer.", "I Love Coding." ]'>
-    <span className="wrap"></span>
-  </a>
-</h2>
+        <Typewriter
+          options={{
+            strings: ["Hi, I'm Niamor", "A Web Developer", "Let's make a project together", "I Love Coding"],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </h2>
     </section>
   );
 }
