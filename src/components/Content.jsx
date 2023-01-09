@@ -188,7 +188,7 @@ export default function Content() {
               {" "}
               {myLanguages.map((x) => {
                 return (
-                  <div className="box_languages bg-box shadow-md justify-center flex gap-[1.5rem] flex-wrap  grow shrink p-[10px] text-center items-center">
+                  <div className="box_languages border   border-2 rounded-md border-zinc-400 shadow-md justify-center flex gap-[1.5rem] flex-wrap  grow shrink p-[10px] text-center items-center">
                     <img className="h-[2rem]" src={x.img} alt="" />
                     <p>{x.language}</p>
                   </div>
