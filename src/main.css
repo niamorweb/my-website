@@ -208,23 +208,23 @@ tr .secondary-cursor .cursor-background:after, .secondary-cursor .cursor-backgro
 }
 @font-face {
   font-family: "Paragraph";
-  src: url(../my-website/assets/fonts/Poppins-Light.ttf);
+  src: url(/assets/fonts/Poppins-Light.ttf);
 }
 @font-face {
   font-family: "Special Font";
-  src: url(../my-website/assets/fonts/AnonymousPro-Regular.ttf);
+  src: url(/assets/fonts/AnonymousPro-Regular.ttf);
 }
 @font-face {
   font-family: "Subtitle";
-  src: url(../my-website/assets/fonts/Poppins-Regular.ttf);
+  src: url(/my-website/assets/fonts/Poppins-Regular.ttf);
 }
 @font-face {
   font-family: "Main Title";
-  src: url(../my-website/assets/fonts/Poppins-Black.ttf);
+  src: url(/assets/fonts/Poppins-Black.ttf);
 }
 @font-face {
   font-family: "Secondary Title";
-  src: url(../my-website/assets/fonts/Poppins-Bold.ttf);
+  src: url(/assets/fonts/Poppins-Bold.ttf);
 }
 body {
   font-family: "Paragraph";
