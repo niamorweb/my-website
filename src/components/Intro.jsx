@@ -10,7 +10,7 @@ export default function Intro() {
       <h2 className="text-mainColor text-lg md:text-4xl ">
         <Typewriter
           options={{
-            strings: ["Hi, I'm Niamor", "A Web Developer", "Let's make a project together", "I Love Coding"],
+            strings: ["Hi, I'm Niamor", "A Web Developer", "Let's work together", "I Love Coding"],
             autoStart: true,
             loop: true,
           }}
