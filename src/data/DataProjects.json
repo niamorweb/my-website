@@ -9,6 +9,15 @@
     "useReact": true
   },
   {
+    "name": "Arch Studio",
+    "link": "https://niamorweb.github.io/arch-studio/",
+    "img": "assets/images/all-project/arch-studio.jpg",
+    "tags": ["html", "scss", "js", "reactjs"],
+    "codeSource": "https://github.com/niamorweb/arch-studio",
+    "description": "A multipage website with a slider and a great design",
+    "useReact": true
+  },
+  {
     "name": "Entertainment web app",
     "link": "https://entertainment-web-app-five.vercel.app/",
     "img": "assets/images/all-project/entertainment-web-app.png",
