@@ -5,8 +5,8 @@ import Intro from "./components/Intro";
 
 function App() {
   //LINKS
-  var linkMail = "mailto:niamorweb@skiff.com";
-  var linkTwitter = "https://twitter.com/niamorweb";
+  var linkMail = "mailto:niamorweb@proton.me";
+  var linkTwitter = "https://twitter.com/niamor_web";
   var linkGitHub = "https://github.com/niamorweb";
 
 
