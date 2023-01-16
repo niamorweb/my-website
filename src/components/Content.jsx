@@ -182,7 +182,7 @@ export default function Content() {
           <div className="sub_container_languages flex flex-col gap-[3rem] pl-8 lg:flex-row  md:pl-20">
             <div className="box_text flex flex-col gap-[1rem]">
               <h2>My current stack</h2>
-              <p>1+ year of experience</p>
+              <p>1+ years of experience</p>
             </div>
             <div className="container_languages gap-4 flex flex-wrap justify-center ">
               {" "}
