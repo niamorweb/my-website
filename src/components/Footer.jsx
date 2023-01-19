@@ -29,7 +29,7 @@ export default function Footer({ linkTwitter, linkGitHub }) {
             className=" font-bold text-mainColor cursor-pointer ml-2"
             onClick={() => copy()}
           >
-            niamorweb@skiff.com
+            niamorpro@proton.me
           </span>
         </span>
 
