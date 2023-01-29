@@ -33,6 +33,10 @@ export default function Content() {
       language: "TAILWIND CSS",
       img: "../../../my-website/assets/images/languages/tailwind-css.svg",
     },
+    {
+      language: "Vue.js",
+      img: "../../../my-website/assets/images/languages/vue.svg",
+    },
   ];
   useEffect(() => {
     setDataProjects(DataProjects);
@@ -210,7 +214,7 @@ export default function Content() {
             </p>
           </div>
 
-          <div className="all_projects grid gap-12 gap-[2rem] md:gap-[4rem] pb-6 ">
+          <div className="all_projects grid gap-20 md:gap-[4rem] pb-6 ">
             {dataProjects.map((project) => {
               return (
                 <div className="container_project gap-6 shadow-md w-full lg:flex	">
