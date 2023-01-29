@@ -37,6 +37,10 @@ export default function Content() {
       language: "Vue.js",
       img: "../../../my-website/assets/images/languages/vue.svg",
     },
+    {
+      language: "Git",
+      img: "../../../my-website/assets/images/languages/git.svg",
+    },
   ];
   useEffect(() => {
     setDataProjects(DataProjects);
@@ -181,18 +185,18 @@ export default function Content() {
           </div>
         </section>
 
-        <section className="my_languages h-[400px] ">
+        <section className="my_languages h-[400px] mb-20 md:mb-0 ">
           <div className="circle2"></div>
           <div className="sub_container_languages flex flex-col gap-[3rem] pl-8 lg:flex-row  md:pl-20">
             <div className="box_text flex flex-col gap-[1rem]">
-              <h2>My current stack</h2>
+              <h2>My skills</h2>
               <p>1+ years of experience</p>
             </div>
             <div className="container_languages gap-4 flex flex-wrap justify-center ">
               {" "}
               {myLanguages.map((x) => {
                 return (
-                  <div className="box_languages border   border-2 rounded-md border-zinc-400 shadow-md justify-center flex gap-[1.5rem] flex-wrap  grow shrink p-[10px] text-center items-center">
+                  <div className="box_languages border-2 rounded-md border-zinc-400 shadow-md justify-center flex gap-[1.5rem] flex-wrap  grow shrink p-[10px] text-center items-center ">
                     <img className="h-[2rem]" src={x.img} alt="" />
                     <p>{x.language}</p>
                   </div>
@@ -210,7 +214,7 @@ export default function Content() {
             <p>
               I believe the best way to learn is by building, even if it means
               getting stuck and having to figure things out on my own. That's
-              why I enjoy web development, I discover new things every day.
+              why I enjoy web development, I discover new things every days.
             </p>
           </div>
 
@@ -234,7 +238,7 @@ export default function Content() {
                     <div className="tags_links_project flex gap-8 ">
                       <div className="open_project_and_code flex items-center gap-4">
                         <a
-                          className="h-6 w-6"
+                          className="h-6 w-6 duration-300 hover:scale-125"
                           href={project.link}
                           target="_blank"
                         >
@@ -244,7 +248,7 @@ export default function Content() {
                           />
                         </a>
                         <a
-                          className="h-6 w-6"
+                          className="h-6 w-6 duration-300 hover:scale-125"
                           href={project.codeSource}
                           target="_blank"
                         >

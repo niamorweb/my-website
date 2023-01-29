@@ -26,7 +26,7 @@ export default function Footer({ linkTwitter, linkGitHub }) {
           <span className="  md:hidden"> My mail: </span>
           <span
             id="myEmail"
-            className=" font-bold text-mainColor cursor-pointer ml-2"
+            className=" font-bold text-mainColor cursor-pointer underline underline-offset-4 ml-2"
             onClick={() => copy()}
           >
             niamorpro@proton.me
