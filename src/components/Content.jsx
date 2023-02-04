@@ -2,11 +2,37 @@ import React, { useEffect, useState } from "react";
 import DataProjects from "../data/DataProjects.json";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Slider from "react-slick";
+
+import "/node_modules/slick-carousel/slick/slick.css";
+import "/node_modules/slick-carousel/slick/slick-theme.css";
 
 export default function Content() {
   gsap.registerPlugin(ScrollTrigger);
 
   const [dataProjects, setDataProjects] = useState([]);
+
+  const settings = {
+    dots: false,
+    speed: 500,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+        },
+      },
+    ],
+  };
 
   const myLanguages = [
     {
@@ -187,7 +213,7 @@ export default function Content() {
 
         <section className="my_languages h-[400px] mb-20 md:mb-0 ">
           <div className="circle2"></div>
-          <div className="sub_container_languages flex flex-col gap-[3rem] pl-8 lg:flex-row  md:pl-20">
+          <div className="sub_container_languages flex flex-col gap-[3rem] pl-8  md:pl-20">
             <div className="box_text flex flex-col gap-[1rem]">
               <h2>My skills</h2>
               <p>1+ years of experience</p>
@@ -208,7 +234,7 @@ export default function Content() {
       </div>
       <section className="my_projects">
         <div className="circle3"></div>
-        <div className="sub_container_projects  flex flex-col gap-[3rem] overflow-hidden pl-8 m-auto md:pl-20 overflow-hidden">
+        <div className="sub_container_projects  flex flex-col gap-[3rem]  pl-8 m-auto md:pl-20">
           <div className="my_projects_box_text flex flex-col gap-[1rem] ">
             <h2>Some Things I’ve Built.</h2>
             <p>
@@ -218,12 +244,13 @@ export default function Content() {
             </p>
           </div>
 
-          <div className="all_projects grid gap-20 md:gap-[4rem] pb-6 ">
+          {/* <div className="all_projects grid gap-20 md:gap-[4rem] pb-6 "> */}
+          <Slider className="all_projects" {...settings}>
             {dataProjects.map((project) => {
               return (
-                <div className="container_project gap-6 shadow-md w-full lg:flex	">
+                <div className="container_project gap-6 shadow-md w-full ">
                   <img
-                    className="h-[16rem] w-full object-cover lg:w-[50%]"
+                    className="h-[16rem] w-full object-cover "
                     src={project.img}
                     alt=""
                   />
@@ -268,8 +295,9 @@ export default function Content() {
                 </div>
               );
             })}
-          </div>
+          </Slider>
         </div>
+        {/* </div> */}
       </section>
     </main>
   );

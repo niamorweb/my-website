@@ -31,7 +31,6 @@ body {
   transition: 0.2s;
 }
 
-
 .subtitle {
   font-family: "Subtitle";
   font-size: 1.1rem;
@@ -53,9 +52,8 @@ h2 {
   transition: 0.2s;
 }
 
-.special{
+.special {
   font-family: "Special Font";
-
 }
 
 .about_me,
@@ -102,7 +100,6 @@ h2 {
     font-size: 1.3rem;
   }
 
-
   h1 {
     font-size: 3.2rem;
   }
@@ -146,3 +143,23 @@ h2 {
 .text-tb-rl {
   writing-mode: vertical-rl;
 }
+
+.container_project {
+  width: calc(33.33% - 20px);
+  padding: 0 10px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.slick-next {
+  right: -20px;
+}
+.slick-prev {
+  left: -40px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+}
+

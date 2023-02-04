@@ -336,4 +336,24 @@ h2 {
 .text-tb-rl {
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
+}
+
+.container_project {
+  width: calc(33.33% - 20px);
+  padding: 0 10px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+.slick-prev {
+  left: -40px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
 }/*# sourceMappingURL=main.css.map */
