@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function Header({ linkMail, linkTwitter, linkGitHub, }) {
+export default function Header({ linkMail, linkTwitter, linkGitHub }) {
   return (
     <>
       <header className="bg-transparent absolute left-0 right-0 top-0 flex items-center justify-between gap-8 px-6 py-4 lg:hidden">
-        <h2 className="brand_logo text-white text-lg ">NIAMOR WEB</h2>
+        <h2 className="brand_logo text-white text-lg font-secondary ">
+          NIAMOR WEB
+        </h2>
         <div className="links flex items-center gap-4">
           <a href={linkTwitter} target="_blank">
             <svg

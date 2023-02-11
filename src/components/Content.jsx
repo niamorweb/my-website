@@ -60,10 +60,6 @@ export default function Content() {
       img: "../../../my-website/assets/images/languages/tailwind-css.svg",
     },
     {
-      language: "Vue.js",
-      img: "../../../my-website/assets/images/languages/vue.svg",
-    },
-    {
       language: "Git",
       img: "../../../my-website/assets/images/languages/git.svg",
     },
@@ -248,7 +244,7 @@ export default function Content() {
   });
 
   return (
-    <main className="flex flex-col  gap-[10rem] w-[80%] m-auto max-w-[80rem] mt-5 ">
+    <main className="flex flex-col  gap-[10rem] w-[85%] md:w-[80%] m-auto max-w-[80rem] mt-5 ">
       <div className="area_checkpoints flex flex-col gap-[10rem]">
         <div className="line_checkpoints hidden md:block"></div>
         <section className="about_me relative md:h-[400px]">
@@ -257,7 +253,7 @@ export default function Content() {
           <div className="sub_container_about flex flex-col gap-5 md:flex-row-reverse md:gap-14 items-center md:justify-between md:items-start  mx-auto md:pl-20">
             <div className="box_content_text flex flex-col gap-6">
               {" "}
-              <h2>About Me.</h2>
+              <h2 className="font-secondary">About Me.</h2>
               <p>
                 Hi, I am a 20 year old web developer from France specializing on
                 front-end development. With over a year of experience in web
@@ -279,7 +275,7 @@ export default function Content() {
           <div className="circle2 hidden md:block"></div>
           <div className="sub_container_languages flex flex-col gap-[3rem] md:pl-20">
             <div className="box_text flex flex-col gap-[1rem]">
-              <h2>My skills</h2>
+              <h2 className="font-secondary">My skills</h2>
               <p>1+ years of experience</p>
             </div>
             <div className="container_languages gap-4 flex flex-wrap justify-center ">
@@ -301,7 +297,7 @@ export default function Content() {
         <div className="circle3 hidden md:block"></div>
         <div className="sub_container_projects  flex flex-col gap-[3rem] m-auto md:pl-20">
           <div className="my_projects_box_text flex flex-col gap-[1rem] ">
-            <h2>Some Things I’ve Built.</h2>
+            <h2 className="font-secondary">Some Things I’ve Built.</h2>
             <p>
               I believe the best way to learn is by building, even if it means
               getting stuck and having to figure things out on my own. That's
