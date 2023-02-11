@@ -81,7 +81,7 @@ export default function Intro() {
         <div className="mark_title_big_screen absolute w-full h-[26px] bottom-[12px] scale-0 bg-mainColor rotate-[-2deg] mix-blend-multiply"></div>
       </h1>
 
-      <h2 className="text-mainColor text-lg md:text-4xl ">
+      <h2 className="text-mainColor text-lg md:text-4xl font-secondary ">
         <Typewriter
           options={{
             strings: [

@@ -18,20 +18,11 @@ export default function Content() {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 10000,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
-        },
-      },
-    ],
+    margin: 200,
+    arrows: false,
   };
 
   const myLanguages = [
@@ -318,7 +309,7 @@ export default function Content() {
                     alt=""
                   />
                   <div className="description flex flex-col gap-[2rem] py-[1rem] md:p-[1rem] px-3 ">
-                    <span className="subtitle text-[1.3rem] ">
+                    <span className=" text-[1.3rem] font-secondary ">
                       {project.name}
                     </span>
 
@@ -348,7 +339,7 @@ export default function Content() {
                           />
                         </a>
                       </div>
-                      <div className="tags flex gap-[.5rem] justify-self-end flex-wrap  ">
+                      <div className="tags flex gap-[.5rem] font-secondary justify-self-end flex-wrap  ">
                         {project.tags.map((tag) => (
                           <p className="uppercase">{tag}</p>
                         ))}
@@ -370,7 +361,7 @@ export default function Content() {
                     alt=""
                   />
                   <div className="description flex flex-col gap-[2rem] py-[1rem] md:p-[1rem] px-3 ">
-                    <span className="subtitle text-[1.3rem] ">
+                    <span className="text-[1.3rem] font-secondary ">
                       {project.name}
                     </span>
 
@@ -400,7 +391,7 @@ export default function Content() {
                           />
                         </a>
                       </div>
-                      <div className="tags flex gap-[.5rem] justify-self-end flex-wrap  ">
+                      <div className="tags flex gap-[.5rem] justify-self-end flex-wrap  font-secondary  ">
                         {project.tags.map((tag) => (
                           <p className="uppercase">{tag}</p>
                         ))}

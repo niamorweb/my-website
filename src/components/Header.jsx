@@ -4,7 +4,7 @@ export default function Header({ linkMail, linkTwitter, linkGitHub }) {
   return (
     <>
       <header className="bg-transparent absolute left-0 right-0 top-0 flex items-center justify-between gap-8 px-6 py-4 lg:hidden">
-        <h2 className="brand_logo text-lg font-secondary leading-[35px] ">
+        <h2 className="brand_logo text-lg font-secondary leading-[35px] font-secondary ">
           NIAMOR WEB
         </h2>
         <div className="links flex items-center gap-4">
@@ -36,7 +36,7 @@ export default function Header({ linkMail, linkTwitter, linkGitHub }) {
               />
             </svg>
           </a>
-          <a href={linkMail}>
+          <a href={linkMail} className="ml-1">
             <svg
               className=" scale-125 duration-100 hover:scale-150  "
               xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ export default function Header({ linkMail, linkTwitter, linkGitHub }) {
         </div>
       </header>
       <aside className="hidden nav_aside fixed left-0 top-0 bottom-0  w-24 flex-col justify-between items-center lg:flex">
-        <h2 className="brand_logo text-tb-rl text-xl rotate-180 mt-8 ">
+        <h2 className="brand_logo text-tb-rl text-xl rotate-180 mt-8  font-secondary">
           NIAMOR WEB
         </h2>
         <div className="links flex flex-col items-center gap-4">
@@ -89,7 +89,7 @@ export default function Header({ linkMail, linkTwitter, linkGitHub }) {
               />
             </svg>
           </a>
-          <a href={linkMail}>
+          <a href={linkMail} className="mt-1">
             <svg
               className=" scale-125 duration-100 hover:scale-150  "
               xmlns="http://www.w3.org/2000/svg"

@@ -5,29 +5,6 @@
 .font-secondary {
   font-family: "Carter One", cursive;
 }
-@font-face {
-  font-family: "Paragraph";
-  src: url(/assets/fonts/Poppins-Light.ttf);
-}
-@font-face {
-  font-family: "Special Font";
-  src: url(/assets/fonts/AnonymousPro-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Subtitle";
-  src: url(/my-website/assets/fonts/Poppins-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Main Title";
-  src: url(/assets/fonts/Poppins-Black.ttf);
-}
-
-@font-face {
-  font-family: "Secondary Title";
-  src: url(/assets/fonts/Poppins-Bold.ttf);
-}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -38,22 +15,18 @@ body {
 }
 
 .subtitle {
-  font-family: "Subtitle";
   font-size: 1.1rem;
   color: #252525;
-  // color: #1abc9c;
   transition: 0.2s;
 }
 
 h1 {
-  font-family: "Main Title";
   font-size: 2.5rem;
   color: #252525;
   transition: 0.2s;
 }
 
 h2 {
-  font-family: "Secondary Title";
   font-size: 2rem;
   color: #252525;
   transition: 0.2s;
