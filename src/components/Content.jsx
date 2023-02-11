@@ -111,7 +111,7 @@ export default function Content() {
     });
 
     gsap.to(circle1, {
-      backgroundColor: "#fff",
+      backgroundColor: "#8c9cff",
       scrollTrigger: {
         trigger: circle1,
         start: "50% 80%",
@@ -121,7 +121,7 @@ export default function Content() {
     });
 
     gsap.to(circle2, {
-      backgroundColor: "#fff",
+      backgroundColor: "#8c9cff",
       scrollTrigger: {
         trigger: circle2,
         start: "50% 80%",
@@ -130,7 +130,7 @@ export default function Content() {
       },
     });
     gsap.to(circle3, {
-      backgroundColor: "#fff",
+      backgroundColor: "#8c9cff",
       scrollTrigger: {
         trigger: circle3,
         start: "50% 80%",
@@ -295,8 +295,8 @@ export default function Content() {
       <section className="my_projects relative">
         <div className="line_mobile_projects md:hidden absolute h-[5px] top-[-10px] bg-mainColor "></div>
         <div className="circle3 hidden md:block"></div>
-        <div className="sub_container_projects  flex flex-col gap-[3rem] m-auto md:pl-20">
-          <div className="my_projects_box_text flex flex-col gap-[1rem] ">
+        <div className="sub_container_projects relative  flex gap-[3rem] m-auto md:pl-20 flex-col lg:flex-row">
+          <div className="my_projects_box_text lg:sticky top-4 flex flex-col gap-[1rem] lg:w-2/4 h-fit ">
             <h2 className="font-secondary">Some Things I’ve Built.</h2>
             <p>
               I believe the best way to learn is by building, even if it means
@@ -305,18 +305,19 @@ export default function Content() {
             </p>
           </div>
 
-          {/* <div className="all_projects grid gap-20 md:gap-[4rem] pb-6 "> */}
-
-          <Slider className="all_projects relative" {...settings}>
+          <Slider
+            className="all_projects flex relative lg:hidden flex-col gap-[20px]  lg:w-2/4"
+            {...settings}
+          >
             {dataProjects.map((project) => {
               return (
-                <div className="container_project gap-6 shadow-md w-full ">
+                <div className="container_project gap-6 shadow-md w-full">
                   <img
                     className="h-[16rem] w-full object-cover "
                     src={project.img}
                     alt=""
                   />
-                  <div className="description flex flex-col gap-[2rem] py-[1rem] md:p-[1rem]">
+                  <div className="description flex flex-col gap-[2rem] py-[1rem] md:p-[1rem] px-3 ">
                     <span className="subtitle text-[1.3rem] ">
                       {project.name}
                     </span>
@@ -332,7 +333,7 @@ export default function Content() {
                           target="_blank"
                         >
                           <img
-                            src="../my-website/assets/icons/icon-new-tab.svg"
+                            src="../my-website/assets/icons/icon-new-tab-color.svg"
                             alt=""
                           />
                         </a>
@@ -342,7 +343,7 @@ export default function Content() {
                           target="_blank"
                         >
                           <img
-                            src="../my-website/assets/icons/icon-github.svg"
+                            src="../my-website/assets/icons/icon-github-color.svg"
                             alt=""
                           />
                         </a>
@@ -358,6 +359,58 @@ export default function Content() {
               );
             })}
           </Slider>
+
+          <div className="all_projects hidden relative lg:flex flex-col gap-[20px]  lg:w-2/4">
+            {dataProjects.map((project) => {
+              return (
+                <div className="container_project gap-6 shadow-md w-full">
+                  <img
+                    className="h-[16rem] w-full object-cover "
+                    src={project.img}
+                    alt=""
+                  />
+                  <div className="description flex flex-col gap-[2rem] py-[1rem] md:p-[1rem] px-3 ">
+                    <span className="subtitle text-[1.3rem] ">
+                      {project.name}
+                    </span>
+
+                    <div className="">
+                      <p>{project.description}</p>
+                    </div>
+                    <div className="tags_links_project flex gap-8 ">
+                      <div className="open_project_and_code flex items-center gap-4">
+                        <a
+                          className="h-6 w-6 duration-300 hover:scale-125"
+                          href={project.link}
+                          target="_blank"
+                        >
+                          <img
+                            src="../my-website/assets/icons/icon-new-tab-color.svg"
+                            alt=""
+                          />
+                        </a>
+                        <a
+                          className="h-6 w-6 duration-300 hover:scale-125"
+                          href={project.codeSource}
+                          target="_blank"
+                        >
+                          <img
+                            src="../my-website/assets/icons/icon-github-color.svg"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div className="tags flex gap-[.5rem] justify-self-end flex-wrap  ">
+                        {project.tags.map((tag) => (
+                          <p className="uppercase">{tag}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
         {/* </div> */}
       </section>
