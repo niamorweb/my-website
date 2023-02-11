@@ -2,14 +2,79 @@ import Footer from "./components/Footer";
 import Content from "./components/Content";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
+import DataProjects from "./data/DataProjects.json";
+import Slider from "react-slick";
+import "/node_modules/slick-carousel/slick/slick.css";
+import "/node_modules/slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [dataProjects, setDataProjects] = useState([]);
+
+  const settings = {
+    dots: false,
+    speed: 500,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+        },
+      },
+    ],
+  };
+
   //LINKS
   var linkMail = "mailto:niamorweb@proton.me";
   var linkTwitter = "https://twitter.com/niamor_web";
   var linkGitHub = "https://github.com/niamorweb";
 
-
+  const myLanguages = [
+    {
+      language: "HTML",
+      img: "../../../my-website/assets/images/languages/html5.svg",
+    },
+    {
+      language: "CSS",
+      img: "../../../my-website/assets/images/languages/css.png",
+    },
+    {
+      language: "SASS",
+      img: "../../../my-website/assets/images/languages/sass.svg",
+    },
+    {
+      language: "JAVASCRIPT",
+      img: "../../../my-website/assets/images/languages/js.svg",
+    },
+    {
+      language: "REACT JS",
+      img: "../../../my-website/assets/images/languages/react.svg",
+    },
+    {
+      language: "TAILWIND CSS",
+      img: "../../../my-website/assets/images/languages/tailwind-css.svg",
+    },
+    {
+      language: "Vue.js",
+      img: "../../../my-website/assets/images/languages/vue.svg",
+    },
+    {
+      language: "Git",
+      img: "../../../my-website/assets/images/languages/git.svg",
+    },
+  ];
+  useEffect(() => {
+    setDataProjects(DataProjects);
+  });
   return (
     <div className="App">
       <Header
@@ -28,11 +93,10 @@ function App() {
         <source src="../my-website/assets/videos/bg2.mp4" type="video/mp4" />
       </video>
 
-
       <Intro />
       <Content />
 
-      <Footer   linkTwitter={linkTwitter} linkGitHub={linkGitHub} />
+      <Footer linkTwitter={linkTwitter} linkGitHub={linkGitHub} />
     </div>
   );
 }

@@ -4,8 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider from "react-slick";
 
-import "/node_modules/slick-carousel/slick/slick.css" 
-import "/node_modules/slick-carousel/slick/slick-theme.css" 
+import "/node_modules/slick-carousel/slick/slick.css";
+import "/node_modules/slick-carousel/slick/slick-theme.css";
 
 export default function Content() {
   gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +17,7 @@ export default function Content() {
     speed: 500,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 10000,
     slidesToShow: 2,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -86,6 +86,14 @@ export default function Content() {
       ".sub_container_projects"
     );
 
+    const line_mobile_about = document.querySelector(".line_mobile_about");
+    const line_mobile_languages = document.querySelector(
+      ".line_mobile_languages"
+    );
+    const line_mobile_projects = document.querySelector(
+      ".line_mobile_projects"
+    );
+
     // Set up the animation
     gsap.to(lineCheckpoints, {
       height: "calc(400px + 10rem)",
@@ -144,13 +152,14 @@ export default function Content() {
         translateY: 0,
         duration: 1.3,
         scrollTrigger: {
-          trigger: circle3, // use the box_text element as the trigger
-          start: "50% 80%", // start the animation when the element is at the top of the viewport
-          end: "bottom bottom", // end the animation when the element is at the bottom of the viewport
+          trigger: circle3,
+          start: "50% 80%",
+          end: "bottom bottom",
           toggleActions: "play none none reverse",
         },
       }
     );
+
     gsap.fromTo(
       sub_container_about,
       {
@@ -160,13 +169,14 @@ export default function Content() {
         translateY: 0,
         duration: 1.3,
         scrollTrigger: {
-          trigger: circle1, // use the box_text element as the trigger
-          start: "50% 80%", // start the animation when the element is at the top of the viewport
-          end: "bottom bottom", // end the animation when the element is at the bottom of the viewport
+          trigger: circle1,
+          start: "50% 80%",
+          end: "bottom bottom",
           toggleActions: "play none none reverse",
         },
       }
     );
+
     gsap.fromTo(
       sub_container_languages,
       {
@@ -176,8 +186,60 @@ export default function Content() {
         translateY: 0,
         duration: 1.3,
         scrollTrigger: {
-          trigger: circle2, // use the box_text element as the trigger
-          start: "50% 80%", // start the animation when the element is at the top of the viewport
+          trigger: circle2,
+          start: "50% 80%",
+          end: "bottom bottom",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      line_mobile_projects,
+      {
+        width: 0,
+      },
+      {
+        delay: 1.5,
+        width: 200,
+        duration: 1.3,
+        scrollTrigger: {
+          trigger: circle3,
+          start: "50% 80%",
+          end: "bottom bottom",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      line_mobile_about,
+      {
+        width: 0,
+      },
+      {
+        delay: 1.5,
+        width: 200,
+        duration: 1.3,
+        scrollTrigger: {
+          trigger: circle1,
+          start: "50% 80%",
+          end: "bottom bottom",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      line_mobile_languages,
+      {
+        width: 0,
+      },
+      {
+        delay: 1.5,
+        width: 200,
+        duration: 1.3,
+        scrollTrigger: {
+          trigger: circle2,
+          start: "50% 80%",
           end: "bottom bottom",
           toggleActions: "play none none reverse",
         },
@@ -186,12 +248,13 @@ export default function Content() {
   });
 
   return (
-    <main className="flex flex-col gap-[10rem] w-[90%] md:w-[80%] m-auto max-w-[80rem] ">
+    <main className="flex flex-col  gap-[10rem] w-[80%] m-auto max-w-[80rem] mt-5 ">
       <div className="area_checkpoints flex flex-col gap-[10rem]">
-        <div className="line_checkpoints"></div>
-        <section className="about_me  h-[400px]">
-          <div className="circle1"></div>
-          <div className="sub_container_about  pl-8 flex flex-col gap-5 md:flex-row-reverse md:gap-14 items-center md:justify-between md:items-start  mx-auto  md:pl-20">
+        <div className="line_checkpoints hidden md:block"></div>
+        <section className="about_me relative md:h-[400px]">
+          <div className="line_mobile_about md:hidden absolute h-[5px] top-[-10px] bg-mainColor "></div>
+          <div className="circle1 hidden md:block"></div>
+          <div className="sub_container_about flex flex-col gap-5 md:flex-row-reverse md:gap-14 items-center md:justify-between md:items-start  mx-auto md:pl-20">
             <div className="box_content_text flex flex-col gap-6">
               {" "}
               <h2>About Me.</h2>
@@ -211,9 +274,10 @@ export default function Content() {
           </div>
         </section>
 
-        <section className="my_languages h-[400px] mb-20 md:mb-0 ">
-          <div className="circle2"></div>
-          <div className="sub_container_languages flex flex-col gap-[3rem] pl-8  md:pl-20">
+        <section className="my_languages relative md:h-[400px] mb-20 md:mb-0 ">
+          <div className="line_mobile_languages md:hidden absolute h-[5px] top-[-10px] bg-mainColor "></div>
+          <div className="circle2 hidden md:block"></div>
+          <div className="sub_container_languages flex flex-col gap-[3rem] md:pl-20">
             <div className="box_text flex flex-col gap-[1rem]">
               <h2>My skills</h2>
               <p>1+ years of experience</p>
@@ -232,9 +296,10 @@ export default function Content() {
           </div>
         </section>
       </div>
-      <section className="my_projects">
-        <div className="circle3"></div>
-        <div className="sub_container_projects  flex flex-col gap-[3rem]  pl-8 m-auto md:pl-20">
+      <section className="my_projects relative">
+        <div className="line_mobile_projects md:hidden absolute h-[5px] top-[-10px] bg-mainColor "></div>
+        <div className="circle3 hidden md:block"></div>
+        <div className="sub_container_projects  flex flex-col gap-[3rem] m-auto md:pl-20">
           <div className="my_projects_box_text flex flex-col gap-[1rem] ">
             <h2>Some Things I’ve Built.</h2>
             <p>
@@ -245,7 +310,8 @@ export default function Content() {
           </div>
 
           {/* <div className="all_projects grid gap-20 md:gap-[4rem] pb-6 "> */}
-          <Slider className="all_projects" {...settings}>
+
+          <Slider className="all_projects relative" {...settings}>
             {dataProjects.map((project) => {
               return (
                 <div className="container_project gap-6 shadow-md w-full ">
@@ -254,7 +320,7 @@ export default function Content() {
                     src={project.img}
                     alt=""
                   />
-                  <div className="description flex flex-col gap-[2rem] p-[1rem]">
+                  <div className="description flex flex-col gap-[2rem] py-[1rem] md:p-[1rem]">
                     <span className="subtitle text-[1.3rem] ">
                       {project.name}
                     </span>
@@ -285,7 +351,7 @@ export default function Content() {
                           />
                         </a>
                       </div>
-                      <div className="tags flex gap-[.5rem] justify-self-end">
+                      <div className="tags flex gap-[.5rem] justify-self-end flex-wrap  ">
                         {project.tags.map((tag) => (
                           <p className="uppercase">{tag}</p>
                         ))}
