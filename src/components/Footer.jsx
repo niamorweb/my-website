@@ -1,5 +1,6 @@
 import React from "react";
 import NotifMailCopied from "./NotifMailCopied";
+import ContactUs from "./ContactUs";
 
 export default function Footer({ linkTwitter, linkGitHub }) {
   function copy() {
@@ -16,6 +17,7 @@ export default function Footer({ linkTwitter, linkGitHub }) {
     <>
       <NotifMailCopied />
       <footer className="px-[3rem] py-[3rem] mt-[8rem] flex flex-col gap-8 items-center md:px-24">
+        <ContactUs />
         <span className="flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +34,7 @@ export default function Footer({ linkTwitter, linkGitHub }) {
               d="m1 4 7.89 5.26a2 2 0 0 0 2.22 0L19 4M3 15h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"
             />
           </svg>
-          <span className=" hidden md:block"> Contact me by mail: </span>
+          <span className=" hidden md:block"> My mail: </span>
           <span className="  md:hidden"> My mail: </span>
           <span
             id="myEmail"
