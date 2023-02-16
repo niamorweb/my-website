@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 
 export default function ContactUs() {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     user_name: "",
     user_email: "",
@@ -11,6 +12,12 @@ export default function ContactUs() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (loading) {
+      return;
+    }
+
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -28,9 +35,11 @@ export default function ContactUs() {
           setTimeout(() => {
             mailSent.style.opacity = "0";
           }, 3500);
+          setLoading(false);
         },
         (error) => {
           alert(error);
+          setLoading(false);
         }
       );
   };
@@ -88,9 +97,10 @@ export default function ContactUs() {
             />
           </div>
           <input
-            className="w-full cursor-pointer border-mainColor border-2 rounded-lg p-2 font-bold bg-mainColor text-white text-lg hover:brightness-110   duration-200  "
+            className="btn_submit_form w-full cursor-pointer border-mainColor border-2 rounded-lg p-2 font-bold bg-mainColor text-white text-lg hover:brightness-110   duration-200  "
             type="submit"
             value="Send"
+            disabled={loading}
           />
         </form>
       </div>
