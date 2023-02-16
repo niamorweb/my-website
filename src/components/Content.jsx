@@ -245,7 +245,7 @@ export default function Content() {
             <div className="box_content_text flex flex-col gap-6">
               {" "}
               <h2 className="font-secondary">About Me.</h2>
-              <p>
+              <p className="xl:text-xl">
                 Hi, I am a 20 year old web developer from France specializing on
                 front-end development. With over a year of experience in web
                 development, it allowed me to gain a solid knowledge in
@@ -256,7 +256,7 @@ export default function Content() {
                 solving problems and creating things that have an impact on
                 users.
               </p>
-              <p>Let's build cool things!</p>
+              <p className="xl:text-xl">Let's build cool things!</p>
             </div>
           </div>
         </section>
@@ -319,21 +319,23 @@ export default function Content() {
                     <div className="tags_links_project flex gap-8 ">
                       <div className="open_project_and_code flex items-center gap-4">
                         <a
-                          className="h-6 w-6 duration-300 hover:scale-125"
+                          className="h-6 w-6 duration-300 hover:scale-125 lg:h-10 lg:w-10"
                           href={project.link}
                           target="_blank"
                         >
                           <img
+                            className="w-full h-full"
                             src="../my-website/assets/icons/icon-new-tab-color.svg"
                             alt=""
                           />
                         </a>
                         <a
-                          className="h-6 w-6 duration-300 hover:scale-125"
+                          className="h-6 w-6 duration-300 hover:scale-125 lg:h-10 lg:w-10"
                           href={project.codeSource}
                           target="_blank"
                         >
                           <img
+                            className="w-full h-full"
                             src="../my-website/assets/icons/icon-github-color.svg"
                             alt=""
                           />
