@@ -41,13 +41,14 @@ export default function Intro() {
         Hi, I'm Niamor
       </h1>
 
-      <h2 className="text-lg md:text-4xl font-medium ">
+      <h2 className="text-lg md:text-4xl font-secondary font-medium flex gap-1 md:gap-2 ">
+        Need
         <Typewriter
           options={{
             strings: [
-              "A Web Developer",
-              "Let's work together",
-              "I Love Coding",
+              "someone for building a portfolio ?",
+              "a front end developer in your team ?",
+              "a dev to start your project ?",
             ],
             autoStart: true,
             loop: true,
@@ -55,12 +56,20 @@ export default function Intro() {
         />
       </h2>
 
-      <a
-        href="#content"
-        className=" bg-white px-5 py-2 rounded-md text-xl font-secondary uppercase font-normal  duration-150 hover:bg-mainColor hover:text-white "
-      >
-        Who am I ?
-      </a>
+      <div className="flex gap-5 items-center mt-10">
+        <a
+          href="#about_me"
+          className=" bg-white px-5 py-3 md:px-7 md:py-5 hover:outline hover:outline-2 hover:outline-mainColor rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 "
+        >
+          Learn more about me
+        </a>
+        <a
+          href="#contact"
+          className="px-5 py-3 md:px-7 md:py-5 rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 bg-mainColor text-white hover:brightness-105 "
+        >
+          Contact me
+        </a>
+      </div>
     </section>
   );
 }

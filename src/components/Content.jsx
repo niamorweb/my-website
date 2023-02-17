@@ -239,7 +239,7 @@ export default function Content() {
 
   return (
     <main
-      id="content"
+      id="about_me"
       className="pt-[75px] flex flex-col  gap-[10rem] w-[85%] md:w-[80%] m-auto max-w-[80rem] mt-5 "
     >
       <div className="area_checkpoints flex flex-col gap-[10rem]">
