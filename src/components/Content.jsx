@@ -282,7 +282,7 @@ export default function Content() {
                   <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
                     <img
                       className="w-full  "
-                      src="/public/assets/icons/icon-integration.svg"
+                      src="/my-website/assets/icons/icon-integration.svg"
                       alt=""
                     />
                   </div>
@@ -294,7 +294,7 @@ export default function Content() {
                   <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
                     <img
                       className="w-full  "
-                      src="/public/assets/icons/icon-responsive2.svg"
+                      src="/my-website/assets/icons/icon-responsive2.svg"
                       alt=""
                     />
                   </div>
@@ -306,7 +306,7 @@ export default function Content() {
                   <div className="container-img justify-center w-10 lg:w-16 h-16 flex items-center">
                     <img
                       className=" "
-                      src="/public/assets/icons/icon-development.svg"
+                      src="/my-website/assets/icons/icon-development.svg"
                       alt=""
                     />
                   </div>
