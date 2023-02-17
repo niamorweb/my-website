@@ -406,7 +406,7 @@ export default function Content() {
             })}
           </Slider>
 
-          <div className="all_projects hidden relative lg:flex flex-col gap-[20px]  lg:w-2/4">
+          <div className="all_projects hidden relative lg:flex flex-col gap-[40px]  lg:w-2/4">
             {dataProjects.map((project) => {
               return (
                 <div className="container_project gap-6 shadow-md w-full">

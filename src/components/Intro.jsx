@@ -45,7 +45,6 @@ export default function Intro() {
         <Typewriter
           options={{
             strings: [
-              "",
               "A Web Developer",
               "Let's work together",
               "I Love Coding",
