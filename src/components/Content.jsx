@@ -133,11 +133,12 @@ export default function Content() {
     gsap.fromTo(
       sub_container_projects,
       {
-        translateY: 1000,
+        opacity: 0,
       },
       {
-        translateY: 0,
-        duration: 1.3,
+        opacity: 1,
+        delay: 0.5,
+        duration: 2,
         scrollTrigger: {
           trigger: circle3,
           start: "50% 80%",
@@ -150,11 +151,12 @@ export default function Content() {
     gsap.fromTo(
       sub_container_about,
       {
-        translateY: 1000,
+        opacity: 0,
       },
       {
-        translateY: 0,
-        duration: 1.3,
+        opacity: 1,
+        delay: 0.5,
+        duration: 2,
         scrollTrigger: {
           trigger: circle1,
           start: "50% 80%",
@@ -167,11 +169,12 @@ export default function Content() {
     gsap.fromTo(
       sub_container_languages,
       {
-        translateY: 1000,
+        opacity: 0,
       },
       {
-        translateY: 0,
-        duration: 1.3,
+        opacity: 1,
+        delay: 0.5,
+        duration: 2,
         scrollTrigger: {
           trigger: circle2,
           start: "50% 80%",
@@ -235,7 +238,10 @@ export default function Content() {
   });
 
   return (
-    <main className="flex flex-col  gap-[10rem] w-[85%] md:w-[80%] m-auto max-w-[80rem] mt-5 ">
+    <main
+      id="content"
+      className="pt-[75px] flex flex-col  gap-[10rem] w-[85%] md:w-[80%] m-auto max-w-[80rem] mt-5 "
+    >
       <div className="area_checkpoints flex flex-col gap-[10rem]">
         <div className="line_checkpoints hidden md:block"></div>
         <section className="about_me relative md:h-[400px]">
@@ -261,24 +267,71 @@ export default function Content() {
           </div>
         </section>
 
-        <section className="my_languages relative md:h-[400px] mb-20 md:mb-0 ">
+        <section className="my_languages relative mb-20 md:mb-0 md:pb-32">
           <div className="line_mobile_languages md:hidden absolute h-[5px] top-[-10px] bg-mainColor "></div>
           <div className="circle2 hidden md:block"></div>
-          <div className="sub_container_languages flex flex-col gap-[3rem] md:pl-20">
-            <div className="box_text flex flex-col gap-[1rem]">
-              <h2 className="font-secondary">My skills</h2>
-              <p>1+ years of experience</p>
-            </div>
-            <div className="container_languages gap-4 flex flex-wrap justify-center ">
-              {" "}
-              {myLanguages.map((x) => {
-                return (
-                  <div className="box_languages border-2 rounded-md border-zinc-400 shadow-md justify-center flex gap-[1.5rem] flex-wrap  grow shrink p-[10px] text-center items-center ">
-                    <img className="h-[2rem]" src={x.img} alt="" />
-                    <p>{x.language}</p>
+          <div className="sub_container_languages flex flex-col gap-20 md:pl-20">
+            <h2 className="font-secondary">Experience</h2>
+            <div className=" flex flex-col gap-4">
+              <div className="box_text flex flex-col gap-2">
+                <span className="font-semibold  text-2xl ">My skills</span>
+                <p>1+ years of experience</p>
+              </div>
+              <div className="flex flex-col md:flex-row  gap-10 items-center">
+                <div className="box w-full md:w-1/3 flex justify-center md:flex-col p-4 rounded-xl items-center gap-3  shadow-md lg:py-8   ">
+                  <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
+                    <img
+                      className="w-full  "
+                      src="/public/assets/icons/icon-integration.svg"
+                      alt=""
+                    />
                   </div>
-                );
-              })}
+                  <span className=" font-semibold text-lg  text-center">
+                    Integration design
+                  </span>
+                </div>
+                <div className="box w-full md:w-1/3 flex justify-center md:flex-col p-4 rounded-xl items-center gap-3  shadow-md lg:py-8">
+                  <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
+                    <img
+                      className="w-full  "
+                      src="/public/assets/icons/icon-responsive2.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span className=" font-semibold text-lg text-center">
+                    Responsive pages
+                  </span>
+                </div>
+                <div className="box w-full md:w-1/3 flex justify-center md:flex-col  p-4 rounded-xl items-center gap-3 shadow-md  lg:py-8 ">
+                  <div className="container-img justify-center w-10 lg:w-16 h-16 flex items-center">
+                    <img
+                      className=" "
+                      src="/public/assets/icons/icon-development.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span className=" font-semibold text-lg text-center">
+                    Development
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <div className="box_text flex flex-col gap-1">
+                {" "}
+                <span className="font-semibold  text-2xl">My knowledges</span>
+              </div>
+              <div className="container_languages gap-4 flex flex-wrap justify-center ">
+                {" "}
+                {myLanguages.map((x) => {
+                  return (
+                    <div className="box_languages border-2 rounded-md shadow-md justify-center flex gap-[1.5rem] flex-wrap  grow shrink p-[10px] text-center items-center ">
+                      <img className="h-[2rem]" src={x.img} alt="" />
+                      <p className="uppercase">{x.language}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>

@@ -16,7 +16,8 @@ export default function Footer({ linkTwitter, linkGitHub }) {
   return (
     <>
       <NotifMailCopied />
-      <footer className="px-[3rem] py-[3rem] mt-[8rem] flex flex-col gap-8 items-center md:px-24">
+      <footer className="px-[3rem] py-[3rem] relative mt-[8rem] flex flex-col gap-8 items-center md:px-24">
+        <div className="footer-bg"></div>
         <ContactUs />
         <span className="flex items-center gap-2">
           <svg
@@ -44,7 +45,6 @@ export default function Footer({ linkTwitter, linkGitHub }) {
             niamorpro@proton.me
           </span>
         </span>
-
         <span className="text-center">
           Created by{" "}
           <span className="font-bold text-mainColor ">NiamorWeb </span> using
