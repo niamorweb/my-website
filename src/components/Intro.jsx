@@ -37,9 +37,14 @@ export default function Intro() {
         <div className="arrow-up"></div>
       </div>
 
-      <h1 className="font-secondary uppercase relative main-title ">
-        Hi, I'm Niamor
-      </h1>
+      <div className="relative">
+        <h1 className="font-secondary uppercase relative main-title">
+          Developper Front End
+        </h1>
+        <span className=" text-[20px] md:text-[30px] font-light font-secondary absolute rotate-[15deg] -top-7 -right-10  md:-top-10  md:-right-[3rem]  ">
+          Hi, I'm Niamor
+        </span>
+      </div>
 
       <h2 className="text-lg md:text-4xl font-secondary font-medium flex gap-1 md:gap-2 ">
         Need
