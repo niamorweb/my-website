@@ -286,7 +286,7 @@ export default function Content() {
                       alt=""
                     />
                   </div>
-                  <span className=" font-semibold text-lg  text-center">
+                  <span className=" font-medium text-xl  text-center font-third">
                     Integration design
                   </span>
                 </div>
@@ -298,20 +298,20 @@ export default function Content() {
                       alt=""
                     />
                   </div>
-                  <span className=" font-semibold text-lg text-center">
+                  <span className=" font-medium text-xl text-center font-third">
                     Responsive pages
                   </span>
                 </div>
                 <div className="box w-full md:w-1/3 flex justify-center md:flex-col  p-4 rounded-xl items-center gap-3 shadow-md  lg:py-8 ">
                   <div className="container-img justify-center w-10 lg:w-16 h-16 flex items-center">
                     <img
-                      className=" "
-                      src="/my-website/assets/icons/icon-development.svg"
+                      className="w-full"
+                      src="/my-website/assets/icons/icon-animation.svg"
                       alt=""
                     />
                   </div>
-                  <span className=" font-semibold text-lg text-center">
-                    Development
+                  <span className=" font-medium text-xl text-center font-third">
+                    Animations & Sliders
                   </span>
                 </div>
               </div>

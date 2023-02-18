@@ -39,9 +39,9 @@ export default function Intro() {
 
       <div className="relative">
         <h1 className="font-secondary uppercase relative main-title">
-          Developper Front End
+          Developer Front End
         </h1>
-        <span className=" text-[20px] md:text-[30px] font-light font-secondary absolute rotate-[15deg] -top-7 -right-10  md:-top-10  md:-right-[3rem]  ">
+        <span className=" text-[20px] md:text-[30px] font-light font-third absolute rotate-[15deg] -top-[1.75rem] -right-[0.5rem]  md:-top-10  md:-right-[3rem]  ">
           Hi, I'm Niamor
         </span>
       </div>
@@ -53,7 +53,7 @@ export default function Intro() {
             strings: [
               "someone for building a portfolio ?",
               "a front end developer in your team ?",
-              "a dev to start your project ?",
+              "a developer to start your project ?",
             ],
             autoStart: true,
             loop: true,

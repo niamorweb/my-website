@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
 .main-cursor,
 .secondary-cursor {
   z-index: 10000;
@@ -215,6 +216,10 @@ html {
 
 .font-secondary {
   font-family: "Anton", sans-serif;
+}
+
+.font-third {
+  font-family: "Mynerve", cursive;
 }
 
 body {
