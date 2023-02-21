@@ -56,7 +56,7 @@ export default function Header({ linkMail, linkTwitter, linkGitHub }) {
           </a>
         </div>
       </header>
-      <aside className="hidden nav_aside fixed left-0 top-0 bottom-0  w-24 flex-col justify-between items-center lg:flex">
+      <aside className="hidden nav_aside z-20 fixed left-0 top-0 bottom-0  w-24 flex-col justify-between items-center lg:flex">
         <h2 className="brand_logo text-tb-rl text-xl rotate-180 mt-8  font-secondary">
           NIAMOR WEB
         </h2>
