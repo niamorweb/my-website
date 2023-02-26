@@ -362,10 +362,18 @@ export default function Content() {
                     alt=""
                   />
                   <div className="description flex flex-col gap-[2rem] py-[1rem] md:p-[1rem] px-3 ">
-                    <span className=" text-[1.3rem] font-secondary ">
-                      {project.name}
-                    </span>
-
+                    <div className="flex justify-between items-center">
+                      <span className="text-[1.3rem] font-secondary ">
+                        {project.name}
+                      </span>
+                      {project.important ? (
+                        <span className="uppercase text-sm xl:text-lg font-secondary text-mainColor">
+                          important project
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </div>
                     <div className="">
                       <p>{project.description}</p>
                     </div>
@@ -416,10 +424,18 @@ export default function Content() {
                     alt=""
                   />
                   <div className="description flex flex-col gap-[2rem] py-[1rem] md:p-[1rem] px-3 ">
-                    <span className="text-[1.3rem] font-secondary ">
-                      {project.name}
-                    </span>
-
+                    <div className="flex justify-between items-center">
+                      <span className="text-[1.3rem] font-secondary ">
+                        {project.name}
+                      </span>
+                      {project.important ? (
+                        <span className="uppercase text-sm xl:text-lg font-secondary text-mainColor">
+                          important project
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </div>
                     <div className="">
                       <p>{project.description}</p>
                     </div>
