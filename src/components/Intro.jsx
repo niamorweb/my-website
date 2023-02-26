@@ -64,13 +64,13 @@ export default function Intro() {
       <div className="flex gap-5 items-center mt-10">
         <a
           href="#about_me"
-          className=" bg-white px-5 py-3 md:px-7 md:py-5 hover:outline hover:outline-2 hover:outline-mainColor rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 "
+          className=" bg-white px-5 py-3 md:px-7 md:py-5 hover:shadow-xl rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 "
         >
           Learn more about me
         </a>
         <a
           href="#contact"
-          className="px-5 py-3 md:px-7 md:py-5 rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 bg-mainColor text-white hover:brightness-105 "
+          className="px-5 py-3 md:px-7 md:py-5 rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 bg-mainColor text-white hover:shadow-xl "
         >
           Contact me
         </a>
