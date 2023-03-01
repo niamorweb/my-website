@@ -340,7 +340,7 @@ export default function Content() {
         <div className="line_mobile_projects md:hidden absolute h-[5px] top-[-10px] bg-mainColor "></div>
         <div className="circle3 hidden md:block"></div>
         <div className="sub_container_projects relative  flex gap-[3rem] m-auto md:pl-20 flex-col lg:flex-row">
-          <div className="my_projects_box_text lg:sticky top-4 flex flex-col gap-[1rem] lg:w-2/4 h-fit ">
+          <div className="my_projects_box_text lg:sticky lg:top-[40%] flex flex-col gap-[1rem] lg:w-2/4 h-fit ">
             <h2 className="font-secondary">Some Things I’ve Built.</h2>
             <p>
               I believe the best way to learn is by building, even if it means

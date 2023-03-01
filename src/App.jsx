@@ -6,20 +6,15 @@ import Intro from "./components/Intro";
 function App() {
   //LINKS
   var linkMail = "mailto:niamorweb@proton.me";
-  var linkTwitter = "https://twitter.com/niamor_web";
   var linkGitHub = "https://github.com/niamorweb";
 
   return (
     <div className="App ">
-      <Header
-        linkMail={linkMail}
-        linkTwitter={linkTwitter}
-        linkGitHub={linkGitHub}
-      />
+      <Header linkMail={linkMail} linkGitHub={linkGitHub} />
       <Intro />
       <Content />
 
-      <Footer linkTwitter={linkTwitter} linkGitHub={linkGitHub} />
+      <Footer linkGitHub={linkGitHub} />
     </div>
   );
 }
