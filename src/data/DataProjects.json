@@ -1,7 +1,7 @@
 [
   {
     "name": "NSlides",
-    "link": "https://niamordev.github.io/nslides/",
+    "link": "https://niamorweb.github.io/nslides/",
     "img": "assets/images/all-project/nslides.jpg",
     "tags": ["html", "sass", "js", "reactjs"],
     "codeSource": "https://github.com/niamorweb/nslides",
