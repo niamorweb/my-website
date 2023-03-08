@@ -5,6 +5,14 @@ export default function Header({ linkLinkedin, linkGitHub }) {
 
   const handleMenuMobile = () => {
     setShowNavMobile(!showNavMobile);
+    if (showNavMobile === false) {
+      console.log("false");
+      document.body.style.overflowY = "hidden";
+      window.scrollTo(0, 0);
+    } else {
+      console.log("tr");
+      document.body.style.overflowY = "visible";
+    }
   };
 
   return (
@@ -17,9 +25,9 @@ export default function Header({ linkLinkedin, linkGitHub }) {
         className="md:hidden cursor-pointer h-8 w-8 p-2 rounded-full flex justify-center items-center text-[23px]"
       >
         {showNavMobile ? (
-          <i class="fa-sharp fa-solid fa-xmark z-20"></i>
+          <i className="fa-sharp fa-solid fa-xmark z-20"></i>
         ) : (
-          <i class="fa-sharp fa-solid fa-bars z-20"></i>
+          <i className="fa-sharp fa-solid fa-bars z-20"></i>
         )}
       </div>
       <div
@@ -45,10 +53,10 @@ export default function Header({ linkLinkedin, linkGitHub }) {
         </ul>
         <div className="links flex items-center gap-8 text-xl ">
           <a href={linkGitHub} target="_blank">
-            <i class="fa-brands fa-github scale-150 "></i>
+            <i className="fa-brands fa-github scale-150 "></i>
           </a>
           <a href={linkLinkedin} target="_blank">
-            <i class="fa-brands fa-linkedin scale-150"></i>
+            <i className="fa-brands fa-linkedin scale-150"></i>
           </a>
         </div>
       </div>
@@ -69,10 +77,10 @@ export default function Header({ linkLinkedin, linkGitHub }) {
         </ul>
         <div className="links flex items-center gap-6">
           <a href={linkGitHub} target="_blank">
-            <i class="fa-brands fa-github scale-150 "></i>
+            <i className="fa-brands fa-github scale-150 "></i>
           </a>
           <a href={linkLinkedin} className="ml-1">
-            <i class="fa-brands fa-linkedin scale-150"></i>
+            <i className="fa-brands fa-linkedin scale-150"></i>
           </a>
         </div>
       </div>

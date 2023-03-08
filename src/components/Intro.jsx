@@ -71,10 +71,10 @@ export default function Intro({ linkLinkedin, linkGitHub }) {
           </h1>
           <div className="links md:hidden mt-8 justify-center flex items-center gap-8 text-xl ">
             <a href={linkGitHub} target="_blank">
-              <i class="fa-brands fa-github scale-150 "></i>
+              <i className="fa-brands fa-github scale-150 "></i>
             </a>
             <a href={linkLinkedin} target="_blank">
-              <i class="fa-brands fa-linkedin scale-150"></i>
+              <i className="fa-brands fa-linkedin scale-150"></i>
             </a>
           </div>
         </div>

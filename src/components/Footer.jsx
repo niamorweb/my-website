@@ -24,7 +24,7 @@ export default function Footer({ linkGitHub, linkLinkedin }) {
       >
         <ContactUs />
         <span className="flex items-center gap-2">
-          <i class="fa-solid fa-envelope text-xl"></i>
+          <i className="fa-solid fa-envelope text-xl"></i>
           <span className=""> My mail: </span>
           <span
             id="myEmail"
@@ -38,10 +38,10 @@ export default function Footer({ linkGitHub, linkLinkedin }) {
           <span>Find me here: </span>
 
           <a href={linkGitHub} target="_blank">
-            <i class="fa-brands fa-github scale-150 "></i>
+            <i className="fa-brands fa-github scale-150 "></i>
           </a>
           <a href={linkLinkedin} target="_blank">
-            <i class="fa-brands fa-linkedin scale-150"></i>
+            <i className="fa-brands fa-linkedin scale-150"></i>
           </a>
         </div>
         <span className="text-sm text-center">

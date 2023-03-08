@@ -74,39 +74,39 @@ export default function Content() {
   const myLanguages = [
     {
       language: "HTML",
-      img: "../../../my-website/src/assets/images/languages/html5.svg",
+      img: "/my-website/assets/images/languages/html5.svg",
     },
     {
       language: "CSS",
-      img: "../../../my-website/src/assets/images/languages/css.svg",
+      img: "/my-website/assets/images/languages/css.svg",
     },
     {
       language: "SASS",
-      img: "../../../my-website/src/assets/images/languages/sass.svg",
+      img: "/my-website/assets/images/languages/sass.svg",
     },
     {
       language: "JAVASCRIPT",
-      img: "../../../my-website/src/assets/images/languages/js.svg",
+      img: "/my-website/assets/images/languages/js.svg",
     },
     {
       language: "REACT JS",
-      img: "../../../my-website/src/assets/images/languages/reactjs.svg",
+      img: "/my-website/assets/images/languages/reactjs.svg",
     },
     {
       language: "TAILWIND CSS",
-      img: "../../../my-website/src/assets/images/languages/tailwind.svg",
+      img: "/my-website/assets/images/languages/tailwind.svg",
     },
     {
       language: "Git",
-      img: "../../../my-website/src/assets/images/languages/git.svg",
+      img: "/my-website/assets/images/languages/git.svg",
     },
     {
       language: "Figma",
-      img: "../../../my-website/src/assets/images/languages/figma.svg",
+      img: "/my-website/assets/images/languages/figma.svg",
     },
     {
       language: "Jquery",
-      img: "../../../my-website/src/assets/images/languages/jquery.svg",
+      img: "/my-website/assets/images/languages/jquery.svg",
     },
   ];
   useEffect(() => {
@@ -222,7 +222,7 @@ export default function Content() {
                 <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
                   <img
                     className="w-full  "
-                    src="/my-website/src/assets/icons/icon-integration.svg"
+                    src="/my-website/assets/icons/icon-integration.svg"
                     alt=""
                   />
                 </div>
@@ -234,7 +234,7 @@ export default function Content() {
                 <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
                   <img
                     className="w-full  "
-                    src="/my-website/src/assets/icons/icon-responsive2.svg"
+                    src="/my-website/assets/icons/icon-responsive2.svg"
                     alt=""
                   />
                 </div>
@@ -246,7 +246,7 @@ export default function Content() {
                 <div className="container-img justify-center w-10 lg:w-16 h-16 flex items-center">
                   <img
                     className="w-full"
-                    src="/my-website/src/assets/icons/icon-animation.svg"
+                    src="/my-website/assets/icons/icon-animation.svg"
                     alt=""
                   />
                 </div>
@@ -324,14 +324,14 @@ export default function Content() {
                             href={project.link}
                             target="_blank"
                           >
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i className="fa-solid fa-arrow-up-right-from-square"></i>
                           </a>
                           <a
                             className="h-6 w-6 duration-300  lg:h-10 lg:w-10 flex justify-center items-center text-xl"
                             href={project.codeSource}
                             target="_blank"
                           >
-                            <i class="fa-brands fa-github"></i>
+                            <i className="fa-brands fa-github"></i>
                           </a>
                         </div>
                         <div className="tags flex gap-[.5rem] font-secondary justify-self-end flex-wrap  ">
