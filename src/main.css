@@ -225,31 +225,51 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  background-color: #f0f2ff;
   color: #252525;
   transition: 0.2s;
-  background-color: rgb(255, 255, 255);
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #252525;
   transition: 0.2s;
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #252525;
+  font-size: 1.5rem;
   transition: 0.2s;
 }
 
 h2 {
   font-size: 2rem;
-  color: #252525;
   transition: 0.2s;
 }
 
-p {
-  color: #393939;
+.intro_circle_illutration {
+  background-color: #0281f8;
+  position: absolute;
+  border-radius: 100%;
+  filter: blur(140px);
+}
+
+.ici1 {
+  width: 100px;
+  height: 100px;
+  right: 20px;
+}
+
+.ici2 {
+  width: 100px;
+  height: 100px;
+  left: 0px;
+  top: 2%;
+}
+
+.ici3 {
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 0%;
 }
 
 .special {
@@ -272,7 +292,7 @@ p {
   height: 0;
   transition: 2s;
   width: 4px;
-  background-color: #8c9cff;
+  background-color: #0281f8;
 }
 
 .circle1,
@@ -287,7 +307,7 @@ p {
   left: 0;
   transform: translate(-45%, 0);
   background: white;
-  border: 2px solid #8c9cff;
+  border: 2px solid #0281f8;
 }
 
 @media (min-width: 785px) {
@@ -298,7 +318,7 @@ p {
     font-size: 1.3rem;
   }
   h1 {
-    font-size: 3.2rem;
+    font-size: 2.3rem;
   }
   h2 {
     font-size: 2.5rem;
@@ -315,10 +335,30 @@ p {
   h2 {
     font-size: 2.7rem;
   }
+  .ici1 {
+    width: 300px;
+    height: 300px;
+    right: 20px;
+  }
+  .ici2 {
+    width: 300px;
+    height: 300px;
+    left: 0px;
+    top: 20%;
+  }
+  .ici3 {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 10%;
+  }
+  .intro_circle_illutration {
+    filter: blur(194px);
+  }
 }
 @media (min-width: 1260px) {
   h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     line-height: 5.5rem;
   }
 }
@@ -345,6 +385,11 @@ p {
     padding: 0 10px;
   }
 }
+@media (min-width: 1024px) {
+  .all_projects_mobile {
+    display: none !important;
+  }
+}
 .scroll-top {
   position: fixed;
   bottom: 20px;
@@ -352,7 +397,7 @@ p {
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background-color: #8c9cff;
+  background-color: #0281f8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -372,11 +417,6 @@ p {
   width: 0;
 }
 
-@media (min-width: 1024px) {
-  .slick-slider {
-    display: none !important;
-  }
-}
 .form-group {
   position: relative;
   margin-bottom: 20px;
@@ -424,17 +464,6 @@ p {
   background-color: #cbcbcb;
   cursor: not-allowed;
   border: #cbcbcb;
-}
-
-.intro-illustration {
-  background: #8c9cff;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  opacity: 0.3;
 }
 
 .footer-bg {

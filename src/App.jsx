@@ -5,16 +5,16 @@ import Intro from "./components/Intro";
 
 function App() {
   //LINKS
-  var linkMail = "mailto:niamorweb@proton.me";
+  var linkLinkedin = "https://github.com/niamorweb";
   var linkGitHub = "https://github.com/niamorweb";
 
   return (
-    <div className="App ">
-      <Header linkMail={linkMail} linkGitHub={linkGitHub} />
+    <div className="App overflow-hidden ">
+      <Header linkLinkedin={linkLinkedin} linkGitHub={linkGitHub} />
       <Intro />
       <Content />
 
-      <Footer linkGitHub={linkGitHub} />
+      <Footer linkLinkedin={linkLinkedin} linkGitHub={linkGitHub} />
     </div>
   );
 }

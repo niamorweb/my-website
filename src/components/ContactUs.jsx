@@ -48,7 +48,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div>
+    <div className="w-full justify-center flex ">
       <span
         id="mailSent"
         className="fixed opacity-0 duration-500 bg-mainColor  text-white  top-14 right-6 px-6 py-4 font-medium	z-[100] "
@@ -66,7 +66,7 @@ export default function ContactUs() {
             <div className="flex flex-col w-full">
               <label className="md:text-lg ">Your name</label>
               <input
-                className="border-mainColor border-[1px] rounded-lg p-2 md:p-3"
+                className="rounded-lg p-2 md:p-3 focus:outline-mainColor"
                 type="text"
                 name="user_name"
                 value={formValues.user_name}
@@ -77,7 +77,7 @@ export default function ContactUs() {
             <div className="flex flex-col w-full">
               <label className="md:text-lg ">Your email</label>
               <input
-                className="border-mainColor border-[1px] rounded-lg p-2 md:p-3"
+                className="rounded-lg p-2 md:p-3 focus:outline-mainColor"
                 type="email"
                 name="user_email"
                 value={formValues.user_email}
@@ -89,7 +89,7 @@ export default function ContactUs() {
           <div className="flex flex-col  w-full">
             <label className="md:text-lg ">Message</label>
             <textarea
-              className="border-mainColor border-[1px] rounded-lg p-2 md:p-3"
+              className=" rounded-lg p-2 md:p-3 focus:outline-mainColor"
               name="message"
               value={formValues.message}
               onChange={handleInputChange}

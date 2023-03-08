@@ -5,6 +5,8 @@ import Typewriter from "typewriter-effect";
 
 export default function Intro() {
   const [showScroll, setShowScroll] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [divPosition, setDivPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const checkScrollTop = () => {
@@ -22,13 +24,30 @@ export default function Intro() {
     };
   }, [showScroll]);
 
+  useEffect(() => {
+    function handleMouseMove(event) {
+      setMousePosition({ x: event.pageX, y: event.pageY });
+    }
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  useEffect(() => {
+    const speed = 0.2;
+    const x = divPosition.x + (mousePosition.x - divPosition.x) * speed;
+    const y = divPosition.y + (mousePosition.y - divPosition.y) * speed;
+    setDivPosition({ x, y });
+  }, [mousePosition]);
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <section className="intro min-h-[100vh] text-center justify-center gap-14  md:pl-8  md:mb-20  flex flex-col w-[85%] m-auto items-center ">
-      <div className="intro-illustration"></div>
+    <section className="intro overflow-hidden bg-[#f0f2ff] relative min-h-[100vh] text-center justify-center gap-14 px-3 lg:px-7  md:mb-20  flex flex-col  m-auto">
       <div
         className="scroll-top"
         onClick={scrollTop}
@@ -37,31 +56,38 @@ export default function Intro() {
         <div className="arrow-up"></div>
       </div>
 
-      <div className="relative">
-        <h1 className="font-secondary uppercase relative main-title">
-          Developer Front End
-        </h1>
-        <span className=" text-[20px] md:text-[30px] font-light font-third absolute rotate-[15deg] -top-[1.75rem] -right-[0.5rem]  md:-top-10  md:-right-[3rem]  ">
-          Hi, I'm Niamor
-        </span>
+      <div
+        style={{ left: divPosition.x + "px", top: divPosition.y + "px" }}
+        className="intro_circle_illutration ici1"
+      ></div>
+      <div className="intro_circle_illutration ici1"></div>
+      <div className="intro_circle_illutration ici2"></div>
+      <div className="intro_circle_illutration ici3"></div>
+      {/* 0281f8 */}
+      <div className="flex flex-col gap-20">
+        <div className="relative w-4/6 mx-auto ">
+          <h1 className="font-secondary relative main-title text-center leading-[1.1]">
+            Hey ! I'm <span className="text-[#0281f8] ">Niamor</span>, a web
+            developer specialized in the Front-End passionate by coding
+          </h1>
+        </div>
+
+        {/* <h2 className="text-lg md:text-3xl mx-auto font-secondary font-medium flex gap-1 md:gap-2 ">
+          Need
+          <Typewriter
+            options={{
+              strings: [
+                "someone for building a portfolio ?",
+                "a front end developer in your team ?",
+                "a developer to start your project ?",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h2> */}
       </div>
-
-      <h2 className="text-lg md:text-4xl font-secondary font-medium flex gap-1 md:gap-2 ">
-        Need
-        <Typewriter
-          options={{
-            strings: [
-              "someone for building a portfolio ?",
-              "a front end developer in your team ?",
-              "a developer to start your project ?",
-            ],
-            autoStart: true,
-            loop: true,
-          }}
-        />
-      </h2>
-
-      <div className="flex gap-5 items-center mt-10">
+      {/* <div className="flex gap-5 items-center mt-10">
         <a
           href="#about_me"
           className=" bg-white px-5 py-3 md:px-7 md:py-5 hover:shadow-xl rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 "
@@ -74,7 +100,7 @@ export default function Intro() {
         >
           Contact me
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }
