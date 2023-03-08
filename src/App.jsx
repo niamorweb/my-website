@@ -5,13 +5,13 @@ import Intro from "./components/Intro";
 
 function App() {
   //LINKS
-  var linkLinkedin = "https://github.com/niamorweb";
+  var linkLinkedin = "https://www.linkedin.com/in/romain-l-681221268/";
   var linkGitHub = "https://github.com/niamorweb";
 
   return (
     <div className="App overflow-hidden ">
       <Header linkLinkedin={linkLinkedin} linkGitHub={linkGitHub} />
-      <Intro />
+      <Intro linkLinkedin={linkLinkedin} linkGitHub={linkGitHub} />
       <Content />
 
       <Footer linkLinkedin={linkLinkedin} linkGitHub={linkGitHub} />

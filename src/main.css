@@ -188,11 +188,6 @@ h2 {
     padding: 0 10px;
   }
 }
-@media (min-width: 1024px) {
-  .all_projects_mobile {
-    display: none !important;
-  }
-}
 .scroll-top {
   position: fixed;
   bottom: 20px;
@@ -277,4 +272,28 @@ h2 {
   background: #8c9cff;
   top: 0;
   opacity: 0.3;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #252525;
+  font-family: "Anton", sans-serif;
+}
+
+.slick-dots {
+  bottom: -100px;
+}
+
+.slick-prev,
+.slick-next {
+  top: -155px !important;
+}
+
+.slick-next {
+  right: 40px !important;
+}
+
+.slick-prev {
+  left: unset !important;
+  right: 120px !important;
 }/*# sourceMappingURL=main.css.map */

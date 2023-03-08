@@ -1,9 +1,8 @@
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Typewriter from "typewriter-effect";
 
-export default function Intro({ linkLinkedin, linkGithub }) {
+export default function Intro({ linkLinkedin, linkGitHub }) {
   const [showScroll, setShowScroll] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [divPosition, setDivPosition] = useState({ x: 0, y: 0 });
@@ -70,8 +69,8 @@ export default function Intro({ linkLinkedin, linkGithub }) {
             Hey ! I'm <span className="text-[#0281f8] ">Niamor</span>, a web
             developer specialized in the Front-End passionate by coding
           </h1>
-          <div className="links md:hidden mt-8 justify-center flex items-center gap-8 ">
-            <a href={linkGithub} target="_blank">
+          <div className="links md:hidden mt-8 justify-center flex items-center gap-8 text-xl ">
+            <a href={linkGitHub} target="_blank">
               <i class="fa-brands fa-github scale-150 "></i>
             </a>
             <a href={linkLinkedin} target="_blank">

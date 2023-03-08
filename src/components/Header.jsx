@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
 
 export default function Header({ linkLinkedin, linkGitHub }) {
   const [showNavMobile, setShowNavMobile] = useState(false);
@@ -30,7 +29,7 @@ export default function Header({ linkLinkedin, linkGitHub }) {
         }}
       >
         {" "}
-        <ul className="flex gap-4 flex-col font-secondary items-left ">
+        <ul className="flex gap-4 flex-col font-secondary items-left text-xl ">
           <li onClick={() => handleMenuMobile()}>
             <a href="#about_me">About me</a>{" "}
           </li>
@@ -44,7 +43,7 @@ export default function Header({ linkLinkedin, linkGitHub }) {
             <a href="#contact">Contact me</a>
           </li>
         </ul>
-        <div className="links flex items-center gap-6 ">
+        <div className="links flex items-center gap-8 text-xl ">
           <a href={linkGitHub} target="_blank">
             <i class="fa-brands fa-github scale-150 "></i>
           </a>
