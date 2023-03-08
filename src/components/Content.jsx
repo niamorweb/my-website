@@ -301,7 +301,7 @@ export default function Content() {
           >
             {dataProjects.map((project) => {
               return (
-                <div className="px-6 ">
+                <div className="lg:px-6 ">
                   <div className="container_project gap-6 shadow-md w-full">
                     <img
                       className="h-[16rem] w-full object-cover "
