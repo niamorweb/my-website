@@ -58,7 +58,9 @@ export default function Footer({ linkGitHub, linkLinkedin }) {
             <i class="fa-brands fa-linkedin scale-150"></i>
           </a>
         </div>
-        <span>Copyright &copy; {currentYear} Niamor. All rights reserved.</span>
+        <span className="text-sm text-center">
+          Copyright &copy; {currentYear} Niamor. All rights reserved.
+        </span>
       </footer>
     </>
   );

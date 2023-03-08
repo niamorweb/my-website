@@ -15,7 +15,7 @@ export default function Header({ linkLinkedin, linkGitHub }) {
       </h2>
       <div
         onClick={() => handleMenuMobile()}
-        className="md:hidden cursor-pointer p-2 rounded-full flex justify-center items-center"
+        className="md:hidden cursor-pointer h-8 w-8 p-2 rounded-full flex justify-center items-center text-[23px]"
       >
         {showNavMobile ? (
           <i class="fa-sharp fa-solid fa-xmark z-20"></i>
@@ -31,40 +31,40 @@ export default function Header({ linkLinkedin, linkGitHub }) {
       >
         {" "}
         <ul className="flex gap-4 flex-col font-secondary items-left ">
-          <li>
+          <li onClick={() => handleMenuMobile()}>
             <a href="#about_me">About me</a>{" "}
           </li>
-          <li>
+          <li onClick={() => handleMenuMobile()}>
             <a href="#skills">Skills</a>
           </li>
-          <li>
+          <li onClick={() => handleMenuMobile()}>
             <a href="#works">Works</a>
           </li>
-          <li>
+          <li onClick={() => handleMenuMobile()}>
             <a href="#contact">Contact me</a>
           </li>
         </ul>
-        <div className="links flex items-center gap-4 ">
+        <div className="links flex items-center gap-6 ">
           <a href={linkGitHub} target="_blank">
             <i class="fa-brands fa-github scale-150 "></i>
           </a>
-          <a href={linkLinkedin} className="ml-1">
+          <a href={linkLinkedin} target="_blank">
             <i class="fa-brands fa-linkedin scale-150"></i>
           </a>
         </div>
       </div>
       <div className="hidden md:flex gap-20 items-center">
-        <ul className="flex gap-6 font-secondary items-center ">
-          <li>
+        <ul className=" flex gap-6 font-secondary items-center  ">
+          <li className="link_large_screen">
             <a href="#about_me">About me</a>{" "}
           </li>
-          <li>
+          <li className="link_large_screen">
             <a href="#skills">Skills</a>
           </li>
-          <li>
+          <li className="link_large_screen">
             <a href="#works">Works</a>
           </li>
-          <li>
+          <li className="link_large_screen">
             <a href="#contact">Contact me</a>
           </li>
         </ul>

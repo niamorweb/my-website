@@ -118,7 +118,7 @@ export default function Content() {
         width: 0,
       },
       {
-        delay: 1.5,
+        delay: 0.5,
         width: 200,
         duration: 1.3,
         scrollTrigger: {
@@ -135,7 +135,7 @@ export default function Content() {
         width: 0,
       },
       {
-        delay: 1.5,
+        delay: 0.5,
         width: 200,
         duration: 1.3,
         scrollTrigger: {
@@ -152,7 +152,7 @@ export default function Content() {
         width: 0,
       },
       {
-        delay: 1.5,
+        delay: 0.5,
         width: 200,
         duration: 1.3,
         scrollTrigger: {
@@ -166,106 +166,106 @@ export default function Content() {
   });
 
   return (
-    <main className="pt-[75px] flex flex-col  gap-[10rem] w-[85%] md:w-[80%] m-auto max-w-[80rem] mt-5 ">
-      <div className="area_checkpoints flex flex-col gap-[10rem]">
-        <section id="about_me" className="about_me py-12 relative md:h-[400px]">
-          <div className="circle1 hidden"></div>
-          <div className="sub_container_about relative flex flex-col gap-5 md:flex-row-reverse md:gap-14 items-center md:justify-between md:items-start  mx-auto ">
-            <div className="line_mobile_about  absolute h-[5px] left-0 -top-5 bg-mainColor "></div>
-            <div className="box_content_text flex flex-col gap-6">
-              {" "}
-              <h2 className="font-secondary">About Me.</h2>
-              <p className="xl:text-xl">
-                Hi, I am a 20 year old web developer from France specializing on
-                front-end development. With over a year of experience in web
-                development, it allowed me to gain a solid knowledge in
-                development.
-                <br /> I taught myself web development by constantly learning
-                and staying up-to-date with the latest technologies and trends
-                in the web world. I am passionate about web development and love
-                solving problems and creating things that have an impact on
-                users.
-              </p>
-              <p className="xl:text-xl">Let's build cool things!</p>
-            </div>
+    <main className="pt-[75px] flex flex-col  gap-[5rem] w-[85%] md:w-[80%] m-auto max-w-[80rem] mt-5 ">
+      <section
+        id="about_me"
+        className="about_me py-[5rem] relative md:h-[400px]"
+      >
+        <div className="circle1 hidden"></div>
+        <div className="sub_container_about relative flex flex-col gap-5 md:flex-row-reverse md:gap-14 items-center md:justify-between md:items-start  mx-auto ">
+          <div className="line_mobile_about  absolute h-[5px] left-0 -top-5 bg-mainColor "></div>
+          <div className="box_content_text flex flex-col gap-6">
+            {" "}
+            <h2 className="font-secondary">About Me.</h2>
+            <p className="xl:text-xl">
+              Hi, I am a 20 year old web developer from France specializing on
+              front-end development. With over a year of experience in web
+              development, it allowed me to gain a solid knowledge in
+              development.
+              <br /> I taught myself web development by constantly learning and
+              staying up-to-date with the latest technologies and trends in the
+              web world. I am passionate about web development and love solving
+              problems and creating things that have an impact on users.
+            </p>
+            <p className="xl:text-xl">Let's build cool things!</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section
-          id="skills"
-          className="my_languages relative py-12 mb-20 md:mb-0 md:pb-32"
-        >
-          <div className="circle2 hidden"></div>
-          <div className="sub_container_languages relative flex flex-col gap-20">
-            <div className="line_mobile_languages absolute h-[5px] -top-5 bg-mainColor "></div>
-            <h2 className="font-secondary">My skills</h2>
-            <div className=" flex flex-col gap-4">
-              <div className="flex flex-col md:flex-row  gap-10 items-center">
-                <div className="box w-full md:w-1/3 flex justify-center md:flex-col p-4 items-center gap-3 lg:py-8   ">
-                  <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
-                    <img
-                      className="w-full  "
-                      src="/my-website/assets/icons/icon-integration.svg"
-                      alt=""
-                    />
-                  </div>
-                  <span className=" font-medium text-xl  text-center">
-                    Mockups integration
-                  </span>
+      <section
+        id="skills"
+        className="my_languages relative py-[5rem] md:mb-0 md:pb-32"
+      >
+        <div className="circle2 hidden"></div>
+        <div className="sub_container_languages relative flex flex-col ">
+          <div className="line_mobile_languages absolute h-[5px] -top-5 bg-mainColor "></div>
+          <h2 className="font-secondary">My skills</h2>
+          <div className=" flex flex-col gap-4">
+            <div className="flex flex-col md:flex-row  gap-10 items-center mb-20 mt-10">
+              <div className="box w-full md:w-1/3 flex justify-center flex-col p-4 items-center lg:gap-3 lg:py-8   ">
+                <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
+                  <img
+                    className="w-full  "
+                    src="/my-website/assets/icons/icon-integration.svg"
+                    alt=""
+                  />
                 </div>
-                <div className="box w-full md:w-1/3 flex justify-center md:flex-col p-4 items-center gap-3 lg:py-8">
-                  <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
-                    <img
-                      className="w-full  "
-                      src="/my-website/assets/icons/icon-responsive2.svg"
-                      alt=""
-                    />
-                  </div>
-                  <span className=" font-medium text-xl text-center">
-                    Responsive pages
-                  </span>
-                </div>
-                <div className="box w-full md:w-1/3 flex justify-center md:flex-col  p-4 rounded-xl items-center gap-3 lg:py-8 ">
-                  <div className="container-img justify-center w-10 lg:w-16 h-16 flex items-center">
-                    <img
-                      className="w-full"
-                      src="/my-website/assets/icons/icon-animation.svg"
-                      alt=""
-                    />
-                  </div>
-                  <span className=" font-medium text-xl text-center">
-                    Animations & Sliders
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="box_text flex flex-col gap-1">
-                {" "}
-                <span className="font-semibold  text-2xl">
-                  With my current knowledge
+                <span className=" font-medium text-xl  text-center">
+                  Mockups integration
                 </span>
               </div>
-              <Slider
-                className="container_languages gap-4 flex flex-wrap justify-center "
-                {...settingsStack}
-              >
-                {" "}
-                {myLanguages.map((x) => {
-                  return (
-                    <>
-                      <div className="box_languages  justify-center flex flex-col gap-[1rem] p-[10px] text-center items-center ">
-                        <img className="w-[9rem]" src={x.img} alt="" />
-                        <p className="uppercase">{x.language}</p>
-                      </div>
-                    </>
-                  );
-                })}
-              </Slider>
+              <div className="box w-full md:w-1/3 flex justify-center flex-col p-4 items-center lg:gap-3 lg:py-8">
+                <div className="container-img w-10 lg:w-16 h-16 flex justify-center items-center">
+                  <img
+                    className="w-full  "
+                    src="/my-website/assets/icons/icon-responsive2.svg"
+                    alt=""
+                  />
+                </div>
+                <span className=" font-medium text-xl text-center">
+                  Responsive pages
+                </span>
+              </div>
+              <div className="box w-full md:w-1/3 flex justify-center flex-col p-4 rounded-xl items-center lg:gap-3 lg:py-8 ">
+                <div className="container-img justify-center w-10 lg:w-16 h-16 flex items-center">
+                  <img
+                    className="w-full"
+                    src="/my-website/assets/icons/icon-animation.svg"
+                    alt=""
+                  />
+                </div>
+                <span className=" font-medium text-xl text-center">
+                  Animations & Sliders
+                </span>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
+          <div className="flex flex-col gap-4">
+            <div className="box_text flex flex-col gap-1">
+              {" "}
+              <span className="font-semibold  text-2xl">
+                With my current knowledge
+              </span>
+            </div>
+            <Slider
+              className="container_languages gap-4 flex flex-wrap justify-center "
+              {...settingsStack}
+            >
+              {" "}
+              {myLanguages.map((x) => {
+                return (
+                  <>
+                    <div className="box_languages  justify-center flex flex-col gap-[1rem] p-[10px] text-center items-center ">
+                      <img className="w-[9rem]" src={x.img} alt="" />
+                      <p className="uppercase">{x.language}</p>
+                    </div>
+                  </>
+                );
+              })}
+            </Slider>
+          </div>
+        </div>
+      </section>
       <section id="works" className="my_projects relative py-[5rem]">
         <div className="circle3 hidden "></div>
         <div className="sub_container_projects relative  flex gap-[3rem] m-auto flex-col lg:flex-row">

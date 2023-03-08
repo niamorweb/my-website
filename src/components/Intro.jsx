@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 
-export default function Intro() {
+export default function Intro({ linkLinkedin, linkGithub }) {
   const [showScroll, setShowScroll] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [divPosition, setDivPosition] = useState({ x: 0, y: 0 });
@@ -47,7 +47,7 @@ export default function Intro() {
   };
 
   return (
-    <section className="intro overflow-hidden bg-[#f0f2ff] relative min-h-[100vh] text-center justify-center gap-14 px-3 lg:px-7  md:mb-20  flex flex-col  m-auto">
+    <section className="intro overflow-hidden bg-[#f0f2ff] relative min-h-[100vh] text-center justify-center gap-14 px-7  md:mb-20  flex flex-col  m-auto">
       <div
         className="scroll-top"
         onClick={scrollTop}
@@ -65,42 +65,21 @@ export default function Intro() {
       <div className="intro_circle_illutration ici3"></div>
       {/* 0281f8 */}
       <div className="flex flex-col gap-20">
-        <div className="relative w-4/6 mx-auto ">
+        <div className="relative md:w-4/6 mx-auto ">
           <h1 className="font-secondary relative main-title text-center leading-[1.1]">
             Hey ! I'm <span className="text-[#0281f8] ">Niamor</span>, a web
             developer specialized in the Front-End passionate by coding
           </h1>
+          <div className="links md:hidden mt-8 justify-center flex items-center gap-8 ">
+            <a href={linkGithub} target="_blank">
+              <i class="fa-brands fa-github scale-150 "></i>
+            </a>
+            <a href={linkLinkedin} target="_blank">
+              <i class="fa-brands fa-linkedin scale-150"></i>
+            </a>
+          </div>
         </div>
-
-        {/* <h2 className="text-lg md:text-3xl mx-auto font-secondary font-medium flex gap-1 md:gap-2 ">
-          Need
-          <Typewriter
-            options={{
-              strings: [
-                "someone for building a portfolio ?",
-                "a front end developer in your team ?",
-                "a developer to start your project ?",
-              ],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </h2> */}
       </div>
-      {/* <div className="flex gap-5 items-center mt-10">
-        <a
-          href="#about_me"
-          className=" bg-white px-5 py-3 md:px-7 md:py-5 hover:shadow-xl rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 "
-        >
-          Learn more about me
-        </a>
-        <a
-          href="#contact"
-          className="px-5 py-3 md:px-7 md:py-5 rounded-md text-base md:text-xl font-secondary uppercase font-normal  duration-150 bg-mainColor text-white hover:shadow-xl "
-        >
-          Contact me
-        </a>
-      </div> */}
     </section>
   );
 }
